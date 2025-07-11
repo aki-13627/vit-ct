@@ -47,7 +47,7 @@ def preprocess_data():
                     windowed_image = apply_ct_window(image_array)
                     
                     image = Image.fromarray(windowed_image)
-                    iamge = image.resize((IMG_SIZE, IMG_SIZE), Image.Resampling.LANCZOS)
+                    image = image.resize((IMG_SIZE, IMG_SIZE), Image.Resampling.LANCZOS)
                     
                     base_filename = os.path.splitext(os.path.basename(dcm_path))[0]
                     output_path = os.path.join(output_dir, f"{base_filename}.png")
